@@ -10,8 +10,7 @@
 @use "components/card";
 @use "components/form";
 
-body {
-  background-color: variables.$primary-color;
-  @include mixins.flex-center;
-  color: black;
+.page-title {
+  font-family: "Gilroy", sans-serif;
+  text-align: center;
 }

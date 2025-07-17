@@ -1,0 +1,23 @@
+@use "utils/mixins";
+@use "utils/variables";
+
+.header {
+  @include mixins.flex-space-between;
+  background-color: variables.$shark-color;
+  padding: 1rem;
+  &__nav {
+    ul.header__menu {
+      display: flex;
+    }
+    li {
+      margin-left: 1rem;
+    }
+    a {
+      color: variables.$text-seashell;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

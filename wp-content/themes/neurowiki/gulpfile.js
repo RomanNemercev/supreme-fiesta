@@ -23,9 +23,9 @@ const paths = {
     src: "assets/js/src/**/*.js",
     dest: "assets/js/dist/",
   },
-  img: {
-    src: "assets/img/src/**/*.{jpg,png,gif,svg}",
-    dest: "assets/img/dist/",
+  fonts: {
+    src: "assets/fonts/**/*.{woff,woff2,ttf}",
+    dest: "assets/dist/fonts/",
   },
 };
 
@@ -69,6 +69,7 @@ function browserSyncReload(cb) {
 function watchFiles() {
   watch(paths.scss.watch, styles);
   watch(paths.js.src, scripts);
+  watch(paths.fonts.src, fonts);
   watch("**/*.php", browserSyncReload); // Перезагрузка при изменении PHP
 }
 
@@ -87,6 +88,10 @@ function lintStyles() {
   );
 }
 
+function fonts() {
+  return src(paths.fonts.src).pipe(dest(paths.fonts.dest));
+}
+
 // Основные задачи
 exports.styles = styles;
 exports.scripts = scripts;
@@ -99,8 +104,9 @@ exports.default = series(
 exports.clean = clean;
 exports.default = series(
   clean,
-  parallel(styles, scripts),
+  parallel(styles, scripts, fonts),
   browserSyncServe,
   watchFiles
 );
 exports.lintStyles = lintStyles;
+exports.fonts = fonts;

@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 // 📱 Миксин: медиазапрос
 @mixin respond($breakpoint) {
   @if $breakpoint == sm {
