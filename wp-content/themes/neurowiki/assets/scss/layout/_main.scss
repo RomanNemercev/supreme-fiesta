@@ -1,0 +1,54 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.breadcrumbs {
+  margin-bottom: 1rem;
+  &__item {
+    color: $text-color;
+    text-decoration: none;
+    &--active {
+      font-weight: 700;
+      color: $primary-color;
+    }
+  }
+  &__separator {
+    margin: 0 0.5rem;
+  }
+}
+.main__title {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.filters {
+  margin-bottom: 1rem;
+  &__placeholder {
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+}
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  p {
+    margin: 0;
+  }
+  &__sort {
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}

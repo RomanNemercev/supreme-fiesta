@@ -1,0 +1,14 @@
+@use "utils/variables";
+
+.footer {
+  background-color: variables.$shark-color;
+  color: variables.$text-seashell;
+  padding: 1rem;
+  text-align: center;
+  &__copyright {
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+    }
+  }
+}

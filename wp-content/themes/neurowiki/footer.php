@@ -1,16 +1,9 @@
-<?php
-
-/**
- * The Footer for our theme
- *
- * This is the template that displays the footer content
- */
-?>
-<footer>
-    <div class="container">
-        <p>© <?php echo esc_html(get_bloginfo('name')); ?> <?php echo date('Y'); ?></p>
+<footer class="footer">
+    <div class="footer__copyright">
+        <p>&copy; <?php echo date('Y'); ?> NeuroWiki. All rights reserved.</p>
     </div>
 </footer>
+
 <?php wp_footer(); ?>
 </body>
 

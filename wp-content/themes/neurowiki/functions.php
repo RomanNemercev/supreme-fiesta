@@ -14,3 +14,19 @@ function neurowiki_register_menus()
     ]);
 }
 add_action('after_setup_theme', 'neurowiki_register_menus');
+
+function neurowiki_register_post_types()
+{
+    register_post_type('neural_network', [
+        'labels' => [
+            'name' => __('Neural Networks', 'neurowiki'),
+            'singular_name' => __('Neural Network', 'neurowiki'),
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-networking',
+    ]);
+}
+add_action('init', 'neurowiki_register_post_types');

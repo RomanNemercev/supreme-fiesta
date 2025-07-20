@@ -1,0 +1,64 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 300px;
+  margin: 1rem;
+  &__header {
+    @include flex-center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__logo {
+    max-width: 50px;
+    height: auto;
+  }
+  &__title {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    &-icon {
+      color: #f5c518;
+      font-size: 1rem;
+    }
+    &-value {
+      font-size: 1rem;
+      color: $text-color;
+    }
+  }
+  &__description {
+    p {
+      font-size: 0.875rem;
+      line-height: 1.4;
+      margin: 0.5rem 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  &__tag {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+}

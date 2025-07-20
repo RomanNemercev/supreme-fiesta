@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
     <header class="header">
         <div class="header__logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/src/logo-white.png" alt="NeuroWiki Logo" /></a>
+            <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/src/logo-white.svg" alt="NeuroWiki Logo" /></a>
         </div>
         <nav class="header__nav">
             <?php
