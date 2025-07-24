@@ -1,4 +1,4 @@
-@use "utils/variables";
+@use "utils/variables" as *;
 @use "utils/mixins";
 @use "base/normalize";
 @use "base/reset";
@@ -10,6 +10,10 @@
 @use "components/buttons";
 @use "components/card";
 @use "components/form";
+
+body {
+  background-color: $shark-second;
+}
 
 .page-title {
   font-family: "Gilroy", sans-serif;

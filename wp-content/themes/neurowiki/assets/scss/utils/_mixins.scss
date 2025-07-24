@@ -11,6 +11,21 @@
   align-items: center;
 }
 
+@mixin f13w400 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@mixin f14w400 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin f16w600 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 // 📱 Миксин: медиазапрос
 @mixin respond($breakpoint) {
   @if $breakpoint == sm {

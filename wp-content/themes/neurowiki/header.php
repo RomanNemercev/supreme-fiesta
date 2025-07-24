@@ -18,18 +18,20 @@
 
 <body <?php body_class(); ?>>
     <header class="header">
-        <div class="header__logo">
-            <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/src/logo-white.svg" alt="NeuroWiki Logo" /></a>
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/src/logo-white.svg" alt="NeuroWiki Logo" /></a>
+            </div>
+            <nav class="header__nav">
+                <?php
+                wp_nav_menu(
+                    [
+                        'theme_location' => 'primary',
+                        'menu_class' => 'header__menu',
+                        'container' => false
+                    ]
+                );
+                ?>
+            </nav>
         </div>
-        <nav class="header__nav">
-            <?php
-            wp_nav_menu(
-                [
-                    'theme_location' => 'primary',
-                    'menu_class' => 'header__menu',
-                    'container' => false
-                ]
-            );
-            ?>
-        </nav>
     </header>

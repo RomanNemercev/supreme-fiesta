@@ -2,22 +2,33 @@
 @use "utils/variables";
 
 .header {
-  @include mixins.flex-space-between;
   background-color: variables.$shark-color;
-  padding: 1rem;
-  &__nav {
-    ul.header__menu {
-      display: flex;
-    }
-    li {
-      margin-left: 1rem;
-    }
-    a {
-      color: variables.$text-seashell;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  &__container {
+    @include mixins.flex-space-between;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 63px;
+    .header__nav {
+      ul.header__menu {
+        display: flex;
       }
+      a {
+        padding: 27.5px 16.3px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        color: variables.$text-seashell;
+        text-decoration: none;
+        &:hover {
+          border-bottom: 1px solid variables.$ribbon-color;
+          margin-bottom: -1px;
+        }
+      }
+    }
+    .header__logo {
+      height: 22px;
     }
   }
 }
